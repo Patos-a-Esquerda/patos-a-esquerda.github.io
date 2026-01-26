@@ -1,0 +1,19 @@
+#results {
+    width: 80%;
+    margin: auto;
+}
+.search-result {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid black;
+}
+
+.search-result img {
+    width: 20%;
+    margin-right: 10%;
+}
+
+.search-result div {
+    width: 70%;
+}
