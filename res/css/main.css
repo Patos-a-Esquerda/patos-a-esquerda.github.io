@@ -1,4 +1,8 @@
-@import url(colors.css);
+:root {
+    --page-background-color: #2C3E50E6;
+    --hyperlink-color: #ff1216;
+    --hyperlink-color-hover: #e11212;
+}
 
 body {
     color: var(--page-background-color);
