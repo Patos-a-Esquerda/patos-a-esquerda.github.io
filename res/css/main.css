@@ -1,3 +1,13 @@
+@import url(colors.css);
+
 body {
-    color: #2C3E50E6;
+    color: var(--page-background-color);
+}
+
+a {
+    color: var(--hyperlink-color);
+}
+
+a:hover {
+    color: var(--hyperlink-color-hover);
 }

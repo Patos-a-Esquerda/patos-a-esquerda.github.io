@@ -1,3 +1,5 @@
+@import url(main.css);
+
 article {
     width: 50%;
     margin: auto;
@@ -12,14 +14,7 @@ article p {
     line-height: 1.6;
 }
 
-article a:not(header a) {
-    color: #ff1216;
-}
-
-article a:not(header a):hover {
-    color: #e11212;
-}
-
+/* imagens */
 article figure {
     margin: 0;
     text-align: center;
@@ -34,8 +29,8 @@ article figure figcaption {
     margin-top: 0.5em;
 }
 
-/* */
-article header ul {
+/* listagem de categoria, autoria e data de publicação do texto */
+.article-classification {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -48,36 +43,38 @@ article header ul {
     text-transform: uppercase;
 }
 
-article header ul li {
+.article-classification li {
     list-style: none;
     color: #535353;
     margin-top: 0.5em;
 }
 
-article header ul li:not(:first-child) {
+.article-classification li:not(:first-child) {
     list-style: disc;
     margin-left: 2em;
 }
 
-article header ul .category {
+.article-classification .category {
     background-color: #ff1216;
     border-radius: 4px;
     color: white;
     padding: 4px 8px;
 }
 
-article header ul li a {
+.article-classification li a, 
+.article-classification li a:hover {
     text-decoration: none;
     color: inherit;
 }
 
-/* lead */
+/* texto do lead */
 article header p {
     text-indent: 0;
     font-size: 15pt;
     margin-bottom: -0.5em;
 }
 
+/* responsividade */
 @media (max-width: 1280px) {
     article {
         width: 80%;

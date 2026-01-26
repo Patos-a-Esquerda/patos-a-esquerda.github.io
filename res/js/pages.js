@@ -8,6 +8,7 @@
 function _buildArticleHeaderUlSection(page) {
     const lead = document.querySelector('article header p');
     const ul = document.createElement('ul');
+    ul.classList.add('article-classification')
     page.categories.forEach(category => {
         const li = document.createElement('li');
         const a = document.createElement('a');
