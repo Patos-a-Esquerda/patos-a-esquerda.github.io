@@ -12,6 +12,6 @@ const pages = {
         timestamp: '2025-11-27',
         keywords: ['Alexandre de Morais', 'Bolsonaro', 'Forças Armadas', 'Generais na Prisão', 'Governo Bolsonaro', 'Militares', 'Prisão de Bolsonaro', 'STF'],
         tags: ['BolsonaroNaCadeia', 'GolpedeEstado', 'Política', 'STF'],
-        thumb_path: 'attachment/thumb.webp'
+        thumb_path: 'attachment/thumb.png'
     }
 }
