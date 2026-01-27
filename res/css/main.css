@@ -1,10 +1,14 @@
 :root {
+    --search-bg-color: #ff1218;
+    --search-button-color: #900909;
+    --search-button-active-color: #c51f1f;
     --page-background-color: #2C3E50E6;
     --hyperlink-color: #ff1216;
     --hyperlink-color-hover: #e11212;
 }
 
 body {
+    margin: 0;
     color: var(--page-background-color);
 }
 

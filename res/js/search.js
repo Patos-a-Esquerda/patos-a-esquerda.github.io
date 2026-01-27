@@ -5,6 +5,15 @@
         * pagesMetadata.js
 `
 
+function normStr(str) {
+  return str
+    .toUpperCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ç/g, "c")
+    .replace(/Ç/g, "C");
+}
+
 function _showResult(path, pageinfo) {
     const resultSection = document.getElementById('results');
     const a = document.createElement('a');
@@ -24,33 +33,45 @@ function _showResult(path, pageinfo) {
     resultSection.appendChild(a);
 }
 
-function _fetchCategory(category_id) {
+function _queryKeyword(query) {
+    Object.entries(pages).forEach(([path, pageinfo]) => {
+        if(pageinfo.keywords.some((e) => normStr(e).includes(normStr(query)))) {
+            _showResult(path, pageinfo);
+        }
+    });
+}
+
+function _queryCategory(category_id) {
     const cat = categories[category_id];
     Object.entries(pages).forEach(([path, pageinfo]) => {
         if(pageinfo.categories.includes(cat)) {
             _showResult(path, pageinfo);
         }
-    })
+    });
 }
 
-function _fetchAuthor(author_id) {
+function _queryAuthor(author_id) {
     const author = authors[author_id];
     Object.entries(pages).forEach(([path, pageinfo]) => {
         if(pageinfo.authors.includes(author)) {
             _showResult(path, pageinfo);
         }
-    })
+    });
 }
 
 function _init() {
     const params = new URLSearchParams(location.search);
-    const category = params.get('cat');
-    const author = params.get('author');
-    if(category != null) {
-        _fetchCategory(category);
+    const query = params.get('q');
+    const category_id = params.get('cat');
+    const author_id = params.get('author');
+    if(query != null) {
+        _queryKeyword(query);
     }
-    if(author != null) {
-        _fetchAuthor(author);
+    else if(category_id != null) {
+        _queryCategory(category_id);
+    }
+    else if(author_id != null) {
+        _queryAuthor(author_id);
     }
 }
 

@@ -1,0 +1,36 @@
+@import url(main.css);
+
+#search-section {
+    background-color: var(--search-bg-color);
+    width: 100%;
+    padding: 2em;
+}
+
+#search-section div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+}
+
+#search-section div input {
+    border-radius: 24px;
+    width: 92%;
+    box-sizing: border-box;
+    padding: 0 2em;
+    border: 1px solid var(--search-border-bar-color);
+}
+
+#search-section div button {
+    border: none;
+    background: none;
+    color: var(--search-button-color);
+    text-decoration: none;
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#search-section div button:active {
+    color: var(--search-button-active-color);
+}
