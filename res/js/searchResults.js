@@ -38,7 +38,7 @@ function _includeResult(path, pageinfo) {
 
 function _queryArticleContent(query) {
     Object.entries(pages).forEach(([path, pageinfo]) => {
-        if(pageinfo.keywords.some((e) => normStr(e).includes(normStr(query)))) {
+        if(pageinfo.keywords.some((e) => normStr(e) === normStr(query))) {
             _includeResult(path, pageinfo);
         } else {
             const articleContent = pageinfo.title + ' ' + pageinfo.lead + ' ' + pageinfo.content;
