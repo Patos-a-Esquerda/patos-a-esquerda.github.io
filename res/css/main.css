@@ -12,6 +12,11 @@ body {
     color: var(--page-background-color);
 }
 
+main {
+    width: 60%;
+    margin: auto;
+}
+
 a {
     color: var(--hyperlink-color);
 }

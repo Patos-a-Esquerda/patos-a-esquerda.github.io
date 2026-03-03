@@ -1,0 +1,87 @@
+#featured-section {
+    display: flex;
+    margin: 16px auto;
+    flex-wrap: wrap;
+    gap: 16px 2%;
+}
+
+.ft-card {
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ft-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.1s ease-in;
+}
+
+.ft-card:hover img {
+    transform: rotate(5deg) scale(1.2);
+}
+
+.ft-card:first-child {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.ft-card:not(:first-child) {
+    width: 49%;
+    box-sizing: border-box;
+}
+
+/* positions */
+
+.ft-card {
+    position: relative;
+}
+
+.ft-area {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ft-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    bottom: 0;
+    padding: 2em;
+    color: white;
+}
+
+.ft-card .ft-title {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.ft-card:not(:first-child) .ft-title {
+    font-size: 1.3em;
+}
+
+.ft-info ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ft-info .ft-author {
+    padding-left: 1em;
+    background: url(../icons/author-icon.svg) no-repeat left center;
+    background-size: 0.7em;
+}
+
+.ft-info .ft-ts {
+    padding-left: 1em;
+    background: url(../icons/timestamp-icon.svg) no-repeat left center;
+    background-size: 0.7em;
+}
