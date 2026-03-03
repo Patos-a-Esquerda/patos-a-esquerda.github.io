@@ -14,7 +14,7 @@
 .ft-card img {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 7;
     object-fit: cover;
     transition: transform 0.1s ease-in;
 }
