@@ -1,9 +1,14 @@
 @import url(main.css);
 
 #search-section {
+    display: flex;
     background-color: var(--search-bg-color);
     width: 100%;
-    padding: 2em;
+    padding: 1em;
+}
+
+.pae-logo {
+    width: 5em;
 }
 
 #search-section div {
